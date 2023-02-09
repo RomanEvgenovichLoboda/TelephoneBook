@@ -2,8 +2,6 @@ import Models.Abonent;
 
 import java.util.*;
 
-import static java.lang.Runtime.getRuntime;
-
 public class Main {
 
     public static void main(String[] args) {menu();}
@@ -15,45 +13,14 @@ public class Main {
             try{
                 System.out.print("\n\t\t\t<-Menu->\n\t\t1 = Add Abonent\n\t\t2 = Show All\n\t\t3 = Remuve Abonent\n\t\t4 = Edit Abonent\n\t\t0 = Exit: ");
                 menu=console.nextLine();
-                switch (menu){
-                    case "1":{
-                        addAbonent();
-                        break;
-                    }
-                    case "2":{
-                        showTelBook();
-                        break;
-                    }
-                    case "3":{
-                        remuveAbonent();
-                        break;
-                    }
-                    case "4":{
-                        editAbonent();
-                        break;
-                    }
-                    case "0":{return;}
-
-                    default:{
-                        System.out.println("\n\tInvalid Input !");
-                    }
+                switch (menu) {
+                    case "1" -> addAbonent();
+                    case "2" -> showTelBook();
+                    case "3" -> remuveAbonent();
+                    case "4" -> editAbonent();
+                    case "0" -> {return;}
+                    default -> System.out.println("\n\tInvalid Input !");
                 }
-//                final String ANSI_CLS = "\u001b[2J";
-//                final String ANSI_HOME = "\u001b[H";
-//                System.out.print(ANSI_CLS + ANSI_HOME);
-//                System.out.flush();
-                //System.out.print("\033[H\033[J");
-                //Runtime.getRuntime().exec("cls");
-                //System.out.print(String.format("\033[H\033[2J"));
-                //System.out.print(ESC+"[1;1H");  System.out.flush();
-                //new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-                //System.out.println("\f");
-//                Runtime runtime = getRuntime();
-//                Process process = runtime.exec("clc");
-//                String ANSI_CLEAR_SEQ = "\u001b[2J";
-//                System.out.println(ANSI_CLEAR_SEQ);
-                //Runtime.getRuntime().exec("cmd /C start cls");
-                //System.console().clear();
             }
             catch (Exception exception){
                 System.out.println("\n\tExeption is :" + exception.getMessage());
