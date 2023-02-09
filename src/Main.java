@@ -5,8 +5,11 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {menu();}
+
     public static ArrayList<Abonent> list = new ArrayList<Abonent>();
+
     public static Scanner console = new Scanner(System.in);
+
     public static void menu(){
         String menu;
         while (true) {
@@ -27,6 +30,7 @@ public class Main {
             }
         }
     }
+
     public static void addAbonent(){
         System.out.print("\nName: ");
         String name = console.nextLine();
@@ -41,6 +45,7 @@ public class Main {
             abonent.showInfo();
         }
     }
+
     public static void showTelBook(){
         if(!list.isEmpty()){
             System.out.println("\n\t<-My Telephone Book->");
@@ -52,6 +57,7 @@ public class Main {
             System.out.println("\n\tList is Empty !");
         }
     }
+
     public static void remuveAbonent(){
         if(!list.isEmpty()){
             System.out.print("\nName of Abonent To Remuve: ");
@@ -75,6 +81,7 @@ public class Main {
             System.out.println("\n\tList is Empty !");
         }
     }
+
     public static void editAbonent(){
         if(!list.isEmpty()){
             System.out.print("\nName of Abonent To Edit: ");
@@ -103,6 +110,7 @@ public class Main {
             System.out.println("\n\tList is Empty !");
         }
     }
+
     public static boolean isHasAlready(String name,int number){
         boolean isHas=false;
         if(!list.isEmpty()){
