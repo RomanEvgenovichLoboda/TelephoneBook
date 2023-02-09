@@ -1,6 +1,6 @@
 package Models;
 
-public class Category {
+public abstract class Category {
     protected String Name;
     public Category(String name){
         Name=name;
@@ -8,8 +8,4 @@ public class Category {
     public String getName() {
         return Name;
     }
-    public void setName(String name) {
-        Name = name;
-    }
-
 }
